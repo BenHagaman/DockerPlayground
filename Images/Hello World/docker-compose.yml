@@ -1,7 +1,7 @@
 version: '3'
 services:
   my-app:
-    image: hello-world:1.1
+    image: ghcr.io/benhagaman/dockerplayground/hello-world:1.1
     ports:
       - 3000:3000
   mongodb:
