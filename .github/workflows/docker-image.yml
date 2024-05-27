@@ -17,6 +17,7 @@ jobs:
     - name: Build the Docker image
       run: |
           cd "Images/Hello World/"
-          docker build -t 1.0 .
+          docker build -t 1.0.0 .
+          docker push ghcr.io/BenHagaman/hello-world:1.0.0
           
 # docker build . --file Dockerfile --tag my-image-name:$(date +%s)
