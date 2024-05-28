@@ -27,7 +27,9 @@ jobs:
           echo "TEST3"
           echo "TEST3"
           echo $GH_USERNAME
-          # echo $GH_TOKEN | docker login ghcr.io -u $GH_USERNAME --password-stdin
+          echo "LOGIN TIME"
+          echo $GH_TOKEN | docker login ghcr.io -u $GH_USERNAME --password-stdin
+          echo "PUSH TIME"
           docker push ghcr.io/benhagaman/hello-world:1.0.0
           
 # docker build . --file Dockerfile --tag my-image-name:$(date +%s)
