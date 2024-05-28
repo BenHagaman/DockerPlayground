@@ -15,14 +15,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
+      env:
+        GH_USERNAME: ${{ secrets.GH_USERNAME }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
           cd "Images/Hello World/"
           docker build -t hello-world:1.0.0 .
           docker tag hello-world:1.0.0 ghcr.io/benhagaman/hello-world:1.0.0
           echo "TEST"
           echo "TEST"
-          echo "TEST"
-          echo "TEST"
+          echo "TEST3"
+          echo "TEST3"
           echo $GH_USERNAME
           # echo $GH_TOKEN | docker login ghcr.io -u $GH_USERNAME --password-stdin
           docker push ghcr.io/benhagaman/hello-world:1.0.0
