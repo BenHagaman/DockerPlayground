@@ -33,11 +33,11 @@ jobs:
           docker tag hello-world:1.0.0 ghcr.io/benhagaman/hello-world:1.0.0
           echo "TEST"
           echo "TEST"
-          echo "TEST"
-          echo "TEST"
           echo $GH_USERNAME
-          # echo $GH_TOKEN | docker login ghcr.io -u $GH_USERNAME --password-stdin
-          docker push ghcr.io/benhagaman/hello-world:1.0.0
+          echo "TEST2"
+          echo "TEST2"
+          echo $GH_TOKEN | docker login ghcr.io -u $GH_USERNAME --password-stdin
+          # docker push ghcr.io/benhagaman/hello-world:1.0.0
 
 
         
